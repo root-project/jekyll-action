@@ -14,14 +14,9 @@ COPY LICENSE README.md /
 ENV BUNDLER_VERSION 1.17.3
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-        bats \
-        ca-certificates \
-        curl \
-        libffi6 \
-        make \
-        shellcheck \
-        libffi6 \
-        git \
+        bundler \
+        gem \
+        openssh-client \
     && bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
