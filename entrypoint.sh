@@ -3,7 +3,7 @@ set -e
 
 echo "#################################################"
 echo "Starting the Jekyll Action"
-
+ls -lR
 bundle install
 echo "#################################################"
 echo "Installion completed"
