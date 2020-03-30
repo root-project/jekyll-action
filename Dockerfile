@@ -18,6 +18,8 @@ RUN apt-get update && \
         gem \
     && apt-get install --no-install-recommends -y \
         openssh-client \
+    && apt-get install --no-install-recommends -y \
+        git \
     && bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
