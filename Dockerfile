@@ -14,7 +14,9 @@ COPY LICENSE README.md /
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         bundler \
+    && apt-get install --no-install-recommends -y \
         gem \
+    && apt-get install --no-install-recommends -y \
         openssh-client \
     && bundle config --global silence_root_warning 1
 
