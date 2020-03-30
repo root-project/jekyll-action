@@ -11,7 +11,6 @@ LABEL "com.github.actions.icon"="book"
 LABEL "com.github.actions.color"="blue"
 COPY LICENSE README.md /
 
-ENV BUNDLER_VERSION 1.17.3
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         bundler \
