@@ -1,4 +1,4 @@
-FROM ruby:2-slim
+FROM jekyll/builder
 
 LABEL version="1.0.0"
 LABEL repository="https://github.com/helaili/jekyll-action"
@@ -11,14 +11,14 @@ LABEL "com.github.actions.icon"="book"
 LABEL "com.github.actions.color"="blue"
 COPY LICENSE README.md /
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y \
-        bundler && \
-    apt-get install --no-install-recommends -y \
-        openssh-client && \
-    apt-get install --no-install-recommends -y \
-        git build-essential && \
-    bundle config --global silence_root_warning 1
+#RUN apt-get update && \
+#    apt-get install --no-install-recommends -y \
+#        bundler && \
+#    apt-get install --no-install-recommends -y \
+#        openssh-client && \
+#    apt-get install --no-install-recommends -y \
+#        git build-essential && \
+#    bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
 
