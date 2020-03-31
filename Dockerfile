@@ -11,13 +11,13 @@ LABEL "com.github.actions.icon"="book"
 LABEL "com.github.actions.color"="blue"
 COPY LICENSE README.md /
 
-RUN apt-get update
+RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-        bundler
+        bundler && \
     apt-get install --no-install-recommends -y \
-        openssh-client
+        openssh-client && \
     apt-get install --no-install-recommends -y \
-        build-essential
+        build-essential && \
     bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
