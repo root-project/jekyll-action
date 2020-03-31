@@ -1,7 +1,22 @@
 #!/bin/bash
 set -e
 
+pwd
+
 chown -R root:root .
+chown root:root $PWD
+chmod a+w .
+chmod a+w $PWD
+
+ls -l
+ls -ld
+
+touch /github/workspace/Gemfile.lock
+chown root:root /github/workspace/Gemfile.lock
+chmod a+w /github/workspace/Gemfile.lock
+
+ls -l
+ls -ld
 
 echo "#################################################"
 echo "Starting the Jekyll Action"
