@@ -15,11 +15,9 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         bundler \
     && apt-get install --no-install-recommends -y \
-        gem \
-    && apt-get install --no-install-recommends -y \
         openssh-client \
     && apt-get install --no-install-recommends -y \
-        git \
+        git make \
     && bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
