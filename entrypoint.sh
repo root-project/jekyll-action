@@ -1,12 +1,10 @@
 #!/bin/bash
 set -e
 
+chown -R root:root .
+
 echo "#################################################"
 echo "Starting the Jekyll Action"
-
-ls -l .
-
-whoami
 
 bundle install
 echo "#################################################"
