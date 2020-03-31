@@ -17,7 +17,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
         openssh-client && \
     apt-get install --no-install-recommends -y \
-        build-essential && \
+        git build-essential && \
     bundle config --global silence_root_warning 1
 
 COPY entrypoint.sh /
