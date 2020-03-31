@@ -12,8 +12,6 @@ LABEL "com.github.actions.color"="blue"
 COPY LICENSE README.md /
 
 RUN apt-get update && \
-    apt-get install apt-rdepends && \
-    apt-rdepends bundler && \
     apt-get install --no-install-recommends -y \
         bundler \
     && apt-get install --no-install-recommends -y \
