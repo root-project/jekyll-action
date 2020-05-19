@@ -11,25 +11,27 @@ chown root:root /github/workspace/Gemfile.lock
 chmod a+w /github/workspace/Gemfile.lock
 
 echo "#################################################"
-echo "Starting the Jekyll Action"
-
+echo "### Starting the Jekyll Action"
+pwd
 bundle install
+ls
+
 echo "#################################################"
-echo "Installion completed"
+echo "### Installion completed"
 
 if [[ -z "${SRC}" ]]; then
   SRC=$(find . -name _config.yml -exec dirname {} \;)
 fi
 
 echo "#################################################"
-echo "Source for the Jekyll site is set to ${SRC}"
+echo "### Source for the Jekyll site is set to ${SRC}"
 
 git status
 git remote -v
 
 bundle exec jekyll build -s ${SRC} -d build
 echo "#################################################"
-echo "Jekyll build done"
+echo "### Jekyll build done"
 
 cd build
 
