@@ -1,12 +1,15 @@
 # jekyll-action
 A GitHub Action to build and publish Jekyll sites to GitHub Pages
 
-Out-of-the-box Jekyll with GitHub Pages allows you to leverage a limited, white-listed, set of gems. Complex sites requiring custom ones or non white-listed ones (AsciiDoc for intstance) used to require a continuous integration build in order to pre-process the site.
+Out-of-the-box Jekyll with GitHub Pages allows you to leverage a limited, white-listed,
+set of gems. Complex sites requiring custom ones or non white-listed ones (AsciiDoc for
+instance) used to require a continuous integration build in order to pre-process the site.
 
 ## Usage
 
 ### Create a Jekyll site
-If you repo doesn't already have one, create a new Jekyll site:  `jekyll new sample-site`. See [the Jekyll website](https://jekyllrb.com/) for more information. In this repo, we have created a site within a `sample_site` folder within the repository because the repository's main goal is not to be a website. If it was the case, we would have created the site at the root of the repository.
+If your repository doesn't already have one, create a new Jekyll site:  `jekyll new sample-site`.
+See [the Jekyll website](https://jekyllrb.com/) for more information. In this repository, we have created a site within a `sample_site` folder within the repository because the repository's main goal is not to be a website. If it was the case, we would have created the site at the root of the repository.
 
 ### Create a `Gemfile`
 As you are using this action to leverage specific Gems, well, you need to declare them! In the sample below we are using [the Jekyll AsciiDoc plugin](https://github.com/asciidoctor/jekyll-asciidoc)
@@ -71,7 +74,7 @@ action "Filters for GitHub Actions" {
 
 ```
 
-Upon successful execution, the GitHub Pages publishing will happen automatically and will be listed on the *_environment_* tab of your repository. 
+Upon successful execution, the GitHub Pages publishing will happen automatically and will be listed on the *_environment_* tab of your repository.
 
 ![image](https://user-images.githubusercontent.com/2787414/51083469-31e29700-171b-11e9-8f10-8c02dd485f83.png)
 
@@ -80,4 +83,4 @@ Just click on the *_View deployment_* button of the `github-pages` environment t
 ![image](https://user-images.githubusercontent.com/2787414/51083411-188d1b00-171a-11e9-9a25-f8b06f33053e.png)
 
 ### Known Limitation
-Publishing of the GitHub pages can fail when using the `GITHUB_TOKEN` secret instead of the `JEKYLL_PAT`. But it might work too :smile: 
+Publishing of the GitHub pages can fail when using the `GITHUB_TOKEN` secret instead of the `JEKYLL_PAT`. But it might work too :smile:
