@@ -13,6 +13,7 @@ chmod a+w /github/workspace/Gemfile.lock
 echo "#################################################"
 echo "### Starting the Jekyll Action"
 pwd
+ls -l
 bundle install
 ls
 
