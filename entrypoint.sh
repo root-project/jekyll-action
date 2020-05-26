@@ -14,13 +14,9 @@ echo "#################################################"
 echo "### Starting the Jekyll Action"
 pwd
 ls -l
-export BUNDLE_IGNORE_CONFIG=1
-bundle config
-bundle --version
 bundle install
 echo $?
 ls
-echo $?
 
 echo "#################################################"
 echo "### Installion completed"
