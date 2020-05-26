@@ -31,7 +31,7 @@ echo "### Source for the Jekyll site is set to ${SRC}"
 git status
 git remote -v
 
-bundle exec jekyll build -s ${SRC} -d build
+bundle exec jekyll build -s ${SRC} -d build --baseurl=ROOT/
 echo "#################################################"
 echo "### Jekyll build done"
 
