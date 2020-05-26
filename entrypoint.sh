@@ -14,8 +14,11 @@ echo "#################################################"
 echo "### Starting the Jekyll Action"
 pwd
 ls -l
+bundle config
 bundle install
+echo $?
 ls
+echo $?
 
 echo "#################################################"
 echo "### Installion completed"
