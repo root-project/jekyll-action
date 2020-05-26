@@ -15,7 +15,7 @@ echo "### Starting the Jekyll Action"
 pwd
 ls -l
 bundle config
-bundle install
+bundle install --deployment
 echo $?
 ls
 echo $?
