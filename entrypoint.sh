@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -x
 
 chown -R root:root .
 chown root:root $PWD
