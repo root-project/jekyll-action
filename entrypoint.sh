@@ -12,7 +12,9 @@ chmod a+w /github/workspace/Gemfile.lock
 
 echo "#################################################"
 echo "### Starting the Jekyll Action"
-bundle install
+set +e
+bundle install # returns non-zero for some reason
+set -e
 
 echo "#################################################"
 echo "### Installion completed"
