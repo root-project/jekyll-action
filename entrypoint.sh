@@ -17,16 +17,9 @@ bundle install # returns non-zero for some reason
 set -e
 
 echo "#################################################"
-echo "### Installion completed"
+echo "### Installation completed"
 
-if [[ -z "${SRC}" ]]; then
-  SRC=$(find . -name _config.yml -exec dirname {} \;)
-fi
-
-echo "#################################################"
-echo "### Source for the Jekyll site is set to ${SRC}"
-
-bundle exec jekyll build -s ${SRC} -d build
+bundle exec jekyll build -d build
 
 echo "#################################################"
 echo "### Jekyll build done"
