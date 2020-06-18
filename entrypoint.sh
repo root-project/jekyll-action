@@ -20,9 +20,8 @@ echo "#################################################"
 echo "### Installation completed"
 
 # PRs have baseurl '<prnumber>/'
-BASEURL="${PR_NUMBER:+--baseurl=${PR_NUMBER}/}"
-
-bundle exec jekyll build ${BASEURL:-} --destination build
+BASEURL_OPT="${PR_NUMBER:+--baseurl=${PR_NUMBER}/}"
+bundle exec jekyll build ${BASEURL_OPT:-} --destination build/${PR_NUMBER:-}
 
 echo "#################################################"
 echo "### Jekyll build done"
